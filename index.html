@@ -3,29 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tu Pastelería - Pastelería artesanal">
     <title>Tu Pastelería</title>
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <!-- MENU -->
     <nav class="menu">
-        <h2 class="logo">Tu Pastelería</h2>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#productos">Productos</a></li>
-            <li><a href="#nosotros">Quiénes somos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+        <a href="#inicio" class="logo">Tu Pastelería</a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="menu-right">
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#nosotros">Quiénes somos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+
+            <button class="cart-button" id="openCart" aria-label="Abrir carrito">
+                <span class="cart-icon">🛒</span>
+                <span>Carrito</span>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
     </nav>
 
     <!-- HERO -->
     <header id="inicio" class="hero">
         <div class="hero-content">
+            <span class="hero-kicker">Hecho artesanalmente</span>
             <h1>Pastelería Artesanal</h1>
             <p>Tortas, postres y dulces hechos con amor</p>
             <a href="#productos" class="btn">Ver productos</a>
@@ -34,76 +49,160 @@
 
     <!-- PRODUCTOS -->
     <section id="productos" class="productos">
-        <h2>Nuestros productos</h2>
+        <div class="section-heading">
+            <span>Elegí tus favoritos</span>
+            <h2>Nuestros productos</h2>
+            <p>Preparaciones artesanales para compartir y disfrutar.</p>
+        </div>
 
         <div class="productos-grid">
 
-            <div class="producto">
-                <img src="img/torta1.jpg" alt="Torta de chocolate">
-                <h3>Torta de Chocolate</h3>
-                <p>Clásica y deliciosa</p>
-            </div>
+            <article class="producto">
+                <div class="producto-image">
+                    <img src="img/torta1.jpg" alt="Torta de chocolate" loading="lazy">
+                </div>
+                <div class="producto-info">
+                    <h3>Torta de Chocolate</h3>
+                    <p>Clásica y deliciosa</p>
+                    <div class="producto-bottom">
+                        <strong>$25.000</strong>
+                        <button class="add-cart" data-id="torta-chocolate">
+                            Agregar
+                        </button>
+                    </div>
+                </div>
+            </article>
 
-            <div class="producto">
-                <img src="img/torta2.jpg" alt="Tarta de frutilla">
-                <h3>Tarta de Frutilla</h3>
-                <p>Fresca y artesanal</p>
-            </div>
+            <article class="producto">
+                <div class="producto-image">
+                    <img src="img/torta2.jpg" alt="Tarta de frutilla" loading="lazy">
+                </div>
+                <div class="producto-info">
+                    <h3>Tarta de Frutilla</h3>
+                    <p>Fresca y artesanal</p>
+                    <div class="producto-bottom">
+                        <strong>$20.000</strong>
+                        <button class="add-cart" data-id="tarta-frutilla">
+                            Agregar
+                        </button>
+                    </div>
+                </div>
+            </article>
 
-            <div class="producto">
-                <img src="img/torta3.jpg" alt="Cupcakes">
-                <h3>Cupcakes</h3>
-                <p>Ideales para eventos</p>
-            </div>
+            <article class="producto">
+                <div class="producto-image">
+                    <img src="img/torta3.jpg" alt="Cupcakes" loading="lazy">
+                </div>
+                <div class="producto-info">
+                    <h3>Cupcakes</h3>
+                    <p>Ideales para eventos</p>
+                    <div class="producto-bottom">
+                        <strong>$15.000</strong>
+                        <button class="add-cart" data-id="cupcakes">
+                            Agregar
+                        </button>
+                    </div>
+                </div>
+            </article>
 
         </div>
     </section>
 
     <!-- NOSOTROS -->
     <section id="nosotros" class="nosotros">
-        <h2>Quiénes somos</h2>
-
-        <p>
-            Somos una pastelería artesanal dedicada a crear momentos dulces,
-            utilizando ingredientes de primera calidad y recetas caseras.
-        </p>
+        <div class="nosotros-inner">
+            <div class="section-heading">
+                <span>Sobre nosotros</span>
+                <h2>Quiénes somos</h2>
+            </div>
+            <p>
+                Somos una pastelería artesanal dedicada a crear momentos dulces,
+                utilizando ingredientes de primera calidad y recetas caseras.
+            </p>
+        </div>
     </section>
 
     <!-- CONTACTO -->
     <section id="contacto" class="contacto">
+        <div class="section-heading">
+            <span>Estamos para ayudarte</span>
+            <h2>Contactanos</h2>
+        </div>
 
-        <h2>Contactanos</h2>
+        <div class="contact-info">
+            <p>📍 Tu Ubicación</p>
+            <p>📞 WhatsApp: +54 9 380 000 0000</p>
+            <p>📸 Instagram: @tupasteleria</p>
+        </div>
 
-        <p>📍 Tu Ubicación</p>
-        <p>📞 WhatsApp: +54 9 380 000 0000</p>
-        <p>📸 Instagram: @tupasteleria</p>
-
-        <a href="https://wa.me/5493800000000" class="btn">
+        <a href="https://wa.me/5493800000000" class="btn" target="_blank" rel="noopener">
             Escribinos por WhatsApp
         </a>
 
         <!-- FIRMA PULSO DIGITAL -->
         <div class="pulso-digital">
             <p>Diseñada por</p>
-
-            <img 
-                src="img/pulsodigital_logo.png" 
+            <img
+                src="img/pulsodigital_logo.png"
                 alt="Pulso Digital"
                 class="pulso-logo"
             >
         </div>
-
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>© 2025 Tu Pastelería - Todos los derechos reservados</p>
+        <p>© 2026 Tu Pastelería - Todos los derechos reservados</p>
     </footer>
 
-    <!-- WHATSAPP -->
-    <a href="https://wa.me/5493800000000" class="whatsapp" target="_blank">
-        WhatsApp
+    <!-- WHATSAPP FLOTANTE -->
+    <a href="https://wa.me/5493800000000" class="whatsapp" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <span>WhatsApp</span>
     </a>
 
+    <!-- OVERLAY -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+
+    <!-- CARRITO -->
+    <aside class="cart-panel" id="cartPanel" aria-hidden="true">
+        <div class="cart-header">
+            <div>
+                <span class="cart-label">Tu selección</span>
+                <h2>Tu pedido</h2>
+            </div>
+            <button class="close-cart" id="closeCart" aria-label="Cerrar carrito">&times;</button>
+        </div>
+
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <div class="empty-cart-icon">🛒</div>
+                <h3>Tu carrito está vacío</h3>
+                <p>Agregá algunos productos para comenzar tu pedido.</p>
+            </div>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cartTotal">$0</strong>
+            </div>
+
+            <button class="clear-cart" id="clearCart" type="button">
+                Vaciar carrito
+            </button>
+
+            <a
+                class="checkout-btn"
+                id="checkoutWhatsApp"
+                href="#"
+                target="_blank"
+                rel="noopener"
+            >
+                Pedir por WhatsApp
+            </a>
+        </div>
+    </aside>
+
+    <script src="script.js"></script>
 </body>
 </html>
