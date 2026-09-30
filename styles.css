@@ -674,15 +674,24 @@ footer {
     .menu {
         min-height: 68px;
         padding: 0 5%;
+        position: sticky;
     }
 
+    /*
+        En celular el carrito y el menú hamburguesa
+        quedan juntos a la derecha.
+    */
     .menu-toggle {
         display: block;
-        order: 2;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
     }
 
     .menu-right {
-        gap: 10px;
+        display: block;
     }
 
     .nav-links {
@@ -708,8 +717,24 @@ footer {
         padding: 12px 0;
     }
 
+    /*
+        El carrito queda inmediatamente a la izquierda
+        del botón hamburguesa.
+    */
     .cart-button {
-        padding: 9px 11px;
+        position: absolute;
+        right: calc(5% + 34px);
+        top: 50%;
+        transform: translateY(-50%);
+        width: 42px;
+        min-width: 42px;
+        height: 42px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        z-index: 10;
     }
 
     .cart-button > span:nth-child(2) {
@@ -764,8 +789,9 @@ footer {
     }
 
     .cart-button {
-        min-width: 42px;
-        justify-content: center;
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
     }
 
     .hero {
