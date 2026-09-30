@@ -112,23 +112,28 @@ img {
     font-size: 1rem;
 }
 
+.cart-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
 .cart-count {
     position: absolute;
     top: -6px;
     right: -6px;
-    min-width: 18px;
-    height: 18px;
+    min-width: 19px;
+    height: 19px;
     padding: 0 5px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
     background: var(--accent);
     color: #fff;
     font-size: 0.65rem;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1;
-    box-sizing: border-box;
     z-index: 20;
 }
 
@@ -727,11 +732,15 @@ footer {
         El carrito queda inmediatamente a la izquierda
         del botón hamburguesa.
     */
-    .cart-button {
+    .cart-wrapper {
         position: absolute;
         right: calc(5% + 34px);
         top: 50%;
         transform: translateY(-50%);
+        z-index: 10;
+    }
+
+    .cart-button {
         width: 42px;
         min-width: 42px;
         height: 42px;
@@ -792,6 +801,10 @@ footer {
 @media (max-width: 390px) {
     .logo {
         font-size: 1.3rem;
+    }
+
+    .cart-wrapper {
+        right: calc(5% + 34px);
     }
 
     .cart-button {
