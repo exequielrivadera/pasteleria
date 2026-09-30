@@ -22,7 +22,7 @@ const PRODUCTS = {
     }
 };
 
-const WHATSAPP_NUMBER = "5493800000000";
+const WHATSAPP_NUMBER = "5493804507584";
 const STORAGE_KEY = "tu-pasteleria-carrito";
 
 let cart = JSON.parse(localStorage.getItem(STORAGE_KEY)) || {};
